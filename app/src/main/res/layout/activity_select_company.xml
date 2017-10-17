@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_base_station_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <com.yzh.rfidbike_police.view.widgets.Header
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerTitle="选择公司"
+        app:leftIcon="@mipmap/arrow_left"
+        app:rightTextVisible="gone"
+        />
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_subCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/title_layout_style">
+
+        <ImageButton
+            android:id="@+id/add_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/margin_horizontal_large"
+            android:background="@null"
+            android:onClick="onBack"
+            android:scaleType="matrix"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/note"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/font_size_normal"/>
+    </RelativeLayout>
+
+</LinearLayout>

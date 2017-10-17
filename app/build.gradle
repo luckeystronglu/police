@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        applicationId "com.yzh.rfidbike_police"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.2.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //在26.0.0-alpha1版本的库中确实没有AnimatorCompatHelper类,强制使用25.1.0
+    configurations.all {
+        resolutionStrategy {
+            force 'com.android.support:support-v4:25.1.0'
+        }
+    }
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    testCompile 'junit:junit:4.12'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    compile 'com.jakewharton:butterknife:8.4.0'
+//    compile 'com.android.support:support-v4:25.1.0'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'cn.bingoogolapple:bga-adapter:1.1.5@aar'
+    compile 'cn.bingoogolapple:bga-photopicker:1.2.3@aar'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'cn.qqtheme.framework:WheelPicker:latest.release'
+    compile 'cn.qqtheme.framework:ColorPicker:latest.release'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'pub.devrel:easypermissions:0.2.1'
+    compile 'com.android.support:design:25.1.0'
+    compile files('libs/pushservice-5.5.0.50.jar')
+    compile 'com.bm.photoview:library:1.4.1'
+    compile 'cn.yipianfengye.android:zxing-library:2.1'
+
+}

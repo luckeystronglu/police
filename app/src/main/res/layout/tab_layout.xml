@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/frag_home_diveder_color"
+        />
+
+    <!-- 底部Tab导航 -->
+    <RadioGroup
+        android:id="@+id/rg_police_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_height_80"
+        android:orientation="horizontal">
+
+        <!-- 实时定位按钮 -->
+        <RadioButton
+            android:id="@+id/rb_frag_location"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="@string/location_at_now"
+            android:textColor="@drawable/selector_frag_icon_tvcolor"
+            android:drawableTop="@drawable/selector_menu_location"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/distance_height_10"
+
+            />
+
+        <!-- 附近车辆按钮 -->
+        <RadioButton
+            android:id="@+id/rb_frag_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="@string/nearby_bikes"
+            android:textColor="@drawable/selector_frag_icon_tvcolor"
+            android:drawableTop="@drawable/selector_menu_search"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/distance_height_10"
+
+
+            />
+
+
+        <!-- 上牌登记按钮 -->
+        <RadioButton
+            android:id="@+id/rb_frag_bike_register"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="@string/add_bike_register"
+            android:textColor="@drawable/selector_frag_icon_tvcolor"
+            android:drawableTop="@drawable/selector_menu_addbike"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/distance_height_10"
+            />
+
+
+        <!-- 设置按钮 -->
+        <RadioButton
+            android:id="@+id/rb_frag_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textColor="@drawable/selector_frag_icon_tvcolor"
+            android:text="@string/main_setting"
+            android:drawableTop="@drawable/selector_menu_setting"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/distance_height_10"
+            />
+
+    </RadioGroup>
+
+</LinearLayout>

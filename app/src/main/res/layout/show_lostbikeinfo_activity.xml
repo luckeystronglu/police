@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+    <com.yzh.rfidbike_police.view.widgets.Header
+        android:id="@+id/showlost_bike_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerTitle="@string/search_result"
+        app:leftIcon="@drawable/back"
+        app:rightTextVisible="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_lost_bike_item"
+        android:layout_margin="@dimen/btn_padding_vertical_10"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/btn_padding_vertical_10">
+
+            <TextView
+                android:layout_width="@dimen/layout_x_90"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_horizontal_normal"
+                android:text="@string/lostbike_cardno"
+                android:textSize="@dimen/font_size_13sp" />
+
+            <TextView
+                android:id="@+id/tv_lost_card_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/btn_padding_vertical_10">
+
+            <TextView
+                android:layout_width="@dimen/layout_x_90"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_horizontal_normal"
+                android:text="@string/lostbike_bikeno"
+                android:textSize="@dimen/font_size_13sp" />
+
+            <TextView
+                android:id="@+id/tv_lostbike_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/btn_padding_vertical_10"
+        android:layout_marginRight="@dimen/btn_padding_vertical_10"
+        android:background="@drawable/shape_lost_bike_item"
+        android:orientation="horizontal"
+        android:padding="@dimen/btn_padding_vertical_10">
+
+        <TextView
+            android:layout_width="@dimen/layout_x_90"
+            android:layout_height="wrap_content"
+            android:text="@string/lostbike_card_photo"
+            android:textSize="@dimen/font_size_13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/btn_margin_horizontal_8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/layout_x_100"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bike_info_iv1"
+                        android:layout_width="@dimen/layout_x_100"
+                        android:layout_height="@dimen/layout_x_100"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                        android:gravity="center_horizontal"
+                        android:text="正面" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/layout_x_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_horizontal_15"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bike_info_iv2"
+                        android:layout_width="@dimen/layout_x_100"
+                        android:layout_height="@dimen/layout_x_100"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                        android:gravity="center_horizontal"
+                        android:text="后面" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_padding_vertical_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/layout_x_100"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bike_info_iv3"
+                        android:layout_width="@dimen/layout_x_100"
+                        android:layout_height="@dimen/layout_x_100"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                        android:gravity="center_horizontal"
+                        android:text="侧面" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/layout_x_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_horizontal_15"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bike_info_iv4"
+                        android:layout_width="@dimen/layout_x_100"
+                        android:layout_height="@dimen/layout_x_100"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                        android:gravity="center_horizontal"
+                        android:text="车牌" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/btn_padding_vertical_10"
+        android:layout_marginRight="@dimen/btn_padding_vertical_10"
+        android:layout_marginTop="@dimen/btn_padding_vertical_10"
+        android:background="@drawable/shape_lost_bike_item"
+        android:orientation="horizontal"
+        android:padding="@dimen/btn_padding_vertical_10">
+
+        <TextView
+            android:layout_width="@dimen/layout_x_90"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_id_photo"
+            android:textSize="@dimen/font_size_13sp" />
+
+        <LinearLayout
+            android:layout_width="@dimen/layout_x_100"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/btn_margin_horizontal_8"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bike_user_iv1"
+                android:layout_width="@dimen/layout_x_100"
+                android:layout_height="@dimen/layout_x_100"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                android:gravity="center_horizontal"
+                android:text="正面" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/layout_x_100"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_horizontal_15"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bike_user_iv2"
+                android:layout_width="@dimen/layout_x_100"
+                android:layout_height="@dimen/layout_x_100"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                android:gravity="center_horizontal"
+                android:text="反面" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_lost_bike_item"
+        android:layout_margin="@dimen/btn_padding_vertical_10"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_y_80"
+            android:orientation="horizontal"
+            android:padding="@dimen/btn_padding_vertical_10"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="@dimen/layout_x_90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_horizontal_normal"
+                android:text="@string/distance"
+                android:textSize="@dimen/font_size_13sp" />
+
+<!--            <com.yzh.rfidbike_police.view.widgets.ProgressBar
+                android:id="@+id/lostinfo_progressBar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/layout_y_25"
+                android:layout_gravity="center_vertical"
+                app:arrowPointRadius="@dimen/layout_x_6"
+                app:backgroundColor="#d8d8d8"
+                app:endFillColor="#fd8703"
+                app:middleFillColor="#fd8703"
+                app:startFillColor="#fd8703" />-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:id="@+id/ll_trace_progress"
+                android:gravity="center_vertical"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="近"
+                    android:layout_margin="@dimen/layout_x_5"
+                    android:textColor="@color/font_color_gray_deep"
+                    android:textSize="@dimen/font_size_small"
+                    />
+                <ProgressBar
+                    android:id="@+id/lostinfo_progressBar"
+                    style="@style/StyleProgressBarMini"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/layout_y_60"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/shape_progressbar_bg"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="远"
+                    android:layout_margin="@dimen/layout_x_5"
+                    android:textColor="@color/font_color_gray_deep"
+                    android:textSize="@dimen/font_size_small"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_trace_failed"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_progressbar_bg"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车辆不在范围内，继续追踪中..."
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/layout_x_5"
+                    android:textColor="@color/font_color_gray_deep"
+                    android:textSize="@dimen/font_size_small"
+                    />
+
+                </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/btn_padding_vertical_10"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/lost_distance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_horizontal_normal"
+                android:text="50"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font_size_13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=" / 120 (值越大表示距离越远)"
+                android:textSize="@dimen/font_size_13sp"
+                android:id="@+id/textView3"
+                android:visibility="gone"
+                />
+            </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/btn_click_trace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/btn_margin_vertical_26"
+            android:layout_marginLeft="@dimen/margin_horizontal_16"
+            android:layout_marginRight="@dimen/margin_horizontal_16"
+            android:background="@drawable/shape_search_bike_btn"
+            android:text="@string/keep_trace"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+
+</LinearLayout>

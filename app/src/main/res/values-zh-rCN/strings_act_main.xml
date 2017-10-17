@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="homepage">首页</string>
+    <string name="location_at_present">实时定位</string>
+    <string name="basestation_id">basestation_id</string>
+    <string name="basestation_map_mark">地图标记</string>
+    <string name="params_configuration">参数配置</string>
+    <string name="device_setup">安装基站</string>
+    <string name="location_at_now">异常车辆</string>
+    <string name="nearby_bikes">近场搜索</string>
+    <string name="add_bike_register">上牌登记</string>
+    <string name="main_setting">设置</string>
+
+
+    <!--公安-车辆搜寻-->
+    <string name="bike_searching">附近车辆</string>
+    <string name="photo_preview">照片预览</string>
+    <string name="report_Bike">报案车辆</string>
+    <string name="searching">开始搜寻</string>
+    <string name="trace">追踪</string>
+    <string name="keep_trace">开始追踪</string>
+    <string name="search_result">车辆追踪</string>
+    <string name="lostbike_cardno">卡号</string>
+    <string name="lostbike_bikeno">车牌号</string>
+    <string name="lostbike_card_photo">车辆照片</string>
+    <string name="personal_id_photo">身份证照片</string>
+    <string name="distance">距    离</string>
+
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_sure">确定</string>
+
+    <string name="dialog_delete_all_content">您确定要删除全部读卡信息吗？</string>
+    <string name="delete_reminder">删除提示</string>
+    <string name="dialog_delete_one_selected">您确定要删除这条读卡信息吗？</string>
+
+</resources>

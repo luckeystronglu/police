@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.yzh.rfidbike_police.view.widgets.Header
+        android:id="@+id/search_bike_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:headerTitle="@string/nearby_bikes"
+        app:leftIconVisible="gone"
+        app:rightTextVisible="visible"
+        app:rightText="过滤设置"
+        />
+    <!-- app:leftIcon="@drawable/back"
+        app:rightText="@string/report_Bike"-->
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_search_bottom"
+        android:layout_below="@+id/search_bike_header">
+
+
+        <ListView
+            android:id="@+id/search_bike_lv"
+            android:divider="@null"
+            android:layout_marginTop="@dimen/btn_padding_vertical_10"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/ll_search_bike"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="暂无已报案或已丢失车辆"
+                android:textColor="@color/textDarkGray"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+<LinearLayout
+    android:id="@+id/ll_search_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/layout_y_80"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    >
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_abnormal_check"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/tv_abnormal_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checked_no"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_horizontal_normal"
+            />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="异常车辆"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_click_searing"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_horizontal_16"
+        android:layout_marginRight="@dimen/margin_horizontal_16"
+        android:layout_marginTop="@dimen/margin_horizontal_16"
+        android:layout_marginBottom="@dimen/margin_horizontal_16"
+        android:background="@drawable/shape_search_bike_btn"
+        android:text="@string/searching"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_normal" />
+</LinearLayout>
+
+
+
+</RelativeLayout>

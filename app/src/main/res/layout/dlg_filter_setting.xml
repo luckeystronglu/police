@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:background="@drawable/shape_radius"
+    >
+    <!--android:background="@drawable/shape_dialog"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_shape_title_solid"
+        >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信号强度过滤设置"
+            android:textSize="@dimen/font_size_larger"
+            android:paddingLeft="@dimen/padding_horizontal_12"
+            android:paddingRight="@dimen/padding_horizontal_12"
+            android:paddingTop="@dimen/padding_vertical_20"
+            android:paddingBottom="@dimen/padding_vertical_20"
+            android:layout_marginLeft="@dimen/padding_horizontal_12"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        >
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seekbar01"
+            android:layout_marginTop="5dp"
+            android:thumb="@drawable/ico_cl_c"
+            android:layout_width="match_parent"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:layout_height="wrap_content"
+
+            />
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_vertical_20"
+            android:paddingLeft="@dimen/padding_horizontal_12"
+            android:paddingRight="@dimen/padding_horizontal_12"
+            android:paddingTop="@dimen/padding_vertical_20"
+            android:text="当前信号强度:"
+            android:enabled="false"
+            android:inputType="number"
+            android:textColor="@color/textDarkGray"
+            android:textSize="@dimen/font_size_normal"
+            android:hint="信号强度范围45至90"
+            android:textColorHint="@color/font_color_gray_light"
+            android:background="@null"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/message_dialog_textcolor"/>
+    <LinearLayout
+        android:divider="@drawable/diliver_work_rg"
+        android:showDividers="middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 取消 -->
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_horizontal_12"
+            android:paddingRight="@dimen/padding_horizontal_12"
+            android:paddingTop="@dimen/layout_y_15"
+            android:paddingBottom="@dimen/layout_y_15"
+            android:textSize="@dimen/font_size_normal"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/textDarkGray"
+            android:text="取消"
+            />
+
+        <!-- 确定 -->
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:textColor="@color/textDarkGray"
+            android:textSize="@dimen/font_size_normal"
+            android:text="确定"
+            />
+    </LinearLayout>
+
+</LinearLayout>

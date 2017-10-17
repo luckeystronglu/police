@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/location"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="实时定位"/>
+
+    <item
+        android:id="@+id/bike_near"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="附近车辆"/>
+
+    <item
+        android:id="@+id/check_in"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="上牌登记"/>
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="设置"/>
+
+</menu>

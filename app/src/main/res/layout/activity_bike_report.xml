@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.yzh.rfidbike_police.view.widgets.Header
+        android:id="@+id/report_bike_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:headerTitle="@string/report_Bike"
+        app:leftIcon="@drawable/back"
+        app:rightTextVisible="gone"
+        />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/report_bike_header">
+
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/report_bike_lv"
+            android:divider="@null"
+            android:layout_marginTop="@dimen/btn_padding_vertical_10"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/ll_report_bike"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="暂无已报案车辆"
+                android:textColor="@color/textDarkGray"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

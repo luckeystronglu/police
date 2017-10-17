@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="homepage">homepage</string>
+    <string name="location_at_present">Location At Present</string>
+
+    <!--公安-车辆搜寻-->
+    <string name="bike_searching">Nearby Bike</string>
+    <string name="photo_preview">Photo Preview</string>
+    <string name="report_Bike">report bike</string>
+    <string name="searching">searching</string>
+    <string name="trace">Trace</string>
+    <string name="keep_trace">Keep Trace</string>
+    <string name="search_result">Search Result</string>
+    <string name="lostbike_cardno">LostBike_CardNo</string>
+    <string name="lostbike_bikeno">LostBike_BikeNo</string>
+    <string name="lostbike_card_photo">LostBike_Photo</string>
+    <string name="personal_id_photo">Personal ID No.</string>
+    <string name="distance">Distance</string>
+
+    <string name="location_at_now">Real Time Location</string>
+    <string name="nearby_bikes">Nearby Bikes</string>
+    <string name="add_bike_register">New Bike Resgister</string>
+    <string name="main_setting">Setting</string>
+
+    <string name="dialog_cancel">cancel</string>
+    <string name="dialog_sure">sure</string>
+
+    <string name="dialog_delete_all_content">Delete all,are you sure？</string>
+    <string name="delete_reminder">Delete reminder</string>
+    <string name="dialog_delete_one_selected">Delete that one,are you sure？</string>
+
+
+</resources>

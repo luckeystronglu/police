@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_horizontal_normal"
+        android:layout_marginRight="@dimen/margin_horizontal_normal"
+        android:background="@drawable/shape_lost_bike_item"
+        android:padding="@dimen/btn_padding_vertical_10">
+
+        <TextView
+            android:id="@+id/tv_lost_bike_cardid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/point"
+            android:textSize="@dimen/font_size_small"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:text="粤B 88888"/>
+
+        <ImageView
+            android:id="@+id/iv_lost_bike_logo"
+            android:layout_toLeftOf="@+id/tv_lost_bike_status"
+            android:layout_marginRight="@dimen/margin_horizontal_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ico_ba"
+            />
+
+        <TextView
+            android:id="@+id/tv_lost_bike_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/padding_horizontal_larger"
+            android:textSize="@dimen/font_size_small"
+            android:text="已报案" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_padding_vertical_10"
+        android:background="#f2f2f2" />
+
+
+</LinearLayout>

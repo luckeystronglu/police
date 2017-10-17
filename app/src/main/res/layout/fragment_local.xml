@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical"
+    >
+
+    <com.yzh.rfidbike_police.view.widgets.Header
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerTitle="@string/location_at_now"
+        app:leftIcon="@mipmap/ico_setting"
+        app:leftIconVisible="gone"
+        app:rightTextVisible="gone"
+        />
+     <!--app:rightText="附近车辆"-->
+
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_home_ad"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:src="@mipmap/banner"-->
+        <!--/>-->
+
+    <RelativeLayout
+        android:id="@+id/rl_abnormal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        >
+
+        <TextView
+
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_vertical_16"
+            android:text="请输入你的车牌号进行定位"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_small"/>
+
+        <LinearLayout
+            android:id="@+id/ll_search_bt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_y_46"
+            android:layout_below="@id/tv_tip"
+            android:layout_marginLeft="@dimen/margin_horizontal_larger"
+            android:layout_marginRight="@dimen/margin_horizontal_larger"
+            android:layout_marginTop="@dimen/margin_vertical_16"
+            android:layout_marginBottom="@dimen/margin_vertical_8"
+            android:background="@drawable/bg_search_white"
+            android:orientation="horizontal"
+
+            >
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="@dimen/layout_x_10"
+                android:singleLine="true"/>
+
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:layout_width="@dimen/layout_x_60"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_search_blue"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ico_search"/>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/ll_abnormal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_search_bt"
+            android:layout_marginLeft="@dimen/margin_horizontal_larger"
+            android:layout_marginRight="@dimen/margin_horizontal_larger"
+            >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/margin_horizontal_larger"
+                    android:layout_marginRight="@dimen/margin_horizontal_larger"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_horizontal_larger"
+                android:layout_marginRight="@dimen/margin_horizontal_larger"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btn_abnormal"
+                android:layout_below="@+id/rv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                />
+
+                <com.handmark.pulltorefresh.library.PullToRefreshListView
+                    android:id="@+id/lv_abnormal_bike"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="@dimen/layout_y_10"
+                    android:visibility="visible"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_abnormal_bike_prompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/tv_no_abnormal_prompt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="暂无异常车辆"
+                        android:textColor="@color/textDarkGray"
+                        android:textSize="@dimen/font_size_normal" />
+                </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

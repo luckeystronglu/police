@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_y_50"
+        android:background="#F1F1F1"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/layout_y_10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ico_div"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车辆信息"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font_size_large"/>
+    </LinearLayout>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f1f1f1"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_y_10"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_y_30"
+                    android:layout_marginBottom="@dimen/btn_padding_default_y"
+                    android:layout_marginTop="@dimen/btn_padding_default_y"
+                    android:orientation="horizontal"
+                    >
+
+                    <com.yzh.rfidbike_police.view.widgets.InputView
+                        android:id="@+id/input_bike_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:InputViewHint="请输入您的车牌号"
+                        app:InputViewTitle="车牌号"/>
+
+                    <TextView
+                        android:id="@+id/tv_query"
+                        android:layout_width="@dimen/layout_x_60"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_btn_base"
+                        android:gravity="center"
+                        android:text="查询"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+               <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_padding_default_y"
+                    android:layout_marginTop="@dimen/btn_padding_default_y"
+                    android:orientation="horizontal"
+                  >
+
+                    <com.yzh.rfidbike_police.view.widgets.InputView
+                        android:id="@+id/input_rfid_no"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/btn_padding_default_y"
+                        android:layout_marginTop="@dimen/btn_padding_default_y"
+                        app:SelectViewIndicatorImg="@drawable/calendar"
+                        app:InputViewHint="请输入RFID卡号"
+                        app:InputViewInputType="number"
+                        app:InputViewTitle="RFID卡号"/>
+                    <LinearLayout
+                        android:id="@+id/ll_scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_horizontal_large"
+                        android:paddingRight="@dimen/margin_horizontal_normal"
+                        >
+                        <TextView
+                            android:id="@+id/tv_scan"
+                            android:layout_width="@dimen/layout_x_30"
+                            android:layout_height="@dimen/layout_x_30"
+                            android:background="@drawable/scan"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <com.yzh.rfidbike_police.view.widgets.InputView
+                    android:id="@+id/input_bike_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_padding_default_y"
+                    android:layout_marginTop="@dimen/btn_padding_default_y"
+                    app:InputViewHint="请输入您的车辆品牌型号"
+                    app:InputViewTitle="品牌型号"/>
+
+                <com.yzh.rfidbike_police.view.widgets.InputView
+                    android:id="@+id/input_bike_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/btn_padding_default_y"
+                    app:InputViewHint="请输入你的车辆颜色"
+                    app:InputViewTitle="颜色"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_y_10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/layout_x_100"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="车辆照片"
+                            android:textColor="@color/textBlack"
+                            android:textSize="@dimen/font_size_small"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ico_b" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/layout_x_76"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+                            android:id="@+id/bga_photo_bike_front"
+                            android:layout_width="@dimen/layout_x_76"
+                            android:layout_height="@dimen/layout_x_76"
+                            app:bga_snpl_itemSpanCount="1"
+                            app:bga_snpl_itemWidth="@dimen/layout_x_76"
+                            app:bga_snpl_maxItemCount="1"
+                            app:bga_snpl_plusDrawable="@mipmap/bg_add_pic"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                            android:text="正面"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/layout_x_76"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_horizontal_large"
+                        android:orientation="vertical">
+                        <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+                            android:id="@+id/bga_photo_bike_back"
+                            android:layout_width="@dimen/layout_x_76"
+                            android:layout_height="@dimen/layout_x_76"
+
+                            app:bga_snpl_itemSpanCount="1"
+                            app:bga_snpl_itemWidth="@dimen/layout_x_76"
+                            app:bga_snpl_maxItemCount="1"
+                            app:bga_snpl_plusDrawable="@mipmap/bg_add_pic"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                            android:text="后面"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/layout_x_76"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_horizontal_large"
+                        android:orientation="vertical">
+                        <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+                            android:id="@+id/bga_photo_bike_side"
+                            android:layout_width="@dimen/layout_x_76"
+                            android:layout_height="@dimen/layout_x_76"
+
+                            app:bga_snpl_itemSpanCount="1"
+                            app:bga_snpl_itemWidth="@dimen/layout_x_76"
+                            app:bga_snpl_maxItemCount="1"
+                            app:bga_snpl_plusDrawable="@mipmap/bg_add_pic"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                            android:text="侧面"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/layout_x_76"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_horizontal_large"
+                        android:orientation="vertical">
+                        <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+                            android:id="@+id/bga_photo_bike_cardno"
+                            android:layout_width="@dimen/layout_x_76"
+                            android:layout_height="@dimen/layout_x_76"
+                            app:bga_snpl_itemSpanCount="1"
+                            app:bga_snpl_itemWidth="@dimen/layout_x_76"
+                            app:bga_snpl_maxItemCount="1"
+                            app:bga_snpl_plusDrawable="@mipmap/bg_add_pic"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/btn_margin_vertical_6"
+                            android:text="标签"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_y_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_y_10"
+                >
+
+                <com.yzh.rfidbike_police.view.widgets.SelectView
+                    android:id="@+id/select_date_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_padding_default_y"
+                    app:SelectViewIndicatorImg="@drawable/calendar"
+                    app:SelectViewHint="请选择购入日期"
+                    app:SelectViewTitle="购入日期"/>
+
+                <com.yzh.rfidbike_police.view.widgets.InputView
+                    android:id="@+id/input_price_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/btn_padding_default_y"
+                    app:InputViewHint="购入价格最高为1000000.00"
+                    app:InputViewInputType="numberDecimal"
+                    app:InputViewMarkVisible="gone"
+                    app:InputViewTitle="购入价格"/>
+
+            </LinearLayout>
+
+            <!--<com.yzh.rfidbike_police.view.widgets.InputView
+                    android:id="@+id/input_usage_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:InputViewHint="请输入使用性质"
+                    app:InputViewMarkVisible="gone"
+                    app:InputViewTitle="使用性质"/>
+
+                <com.yzh.rfidbike_police.view.widgets.InputView
+                    android:id="@+id/input_people_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:InputViewHint="核载人数最多为999"
+                    android:visibility="gone"
+                    app:InputViewInputType="number"
+                    app:InputViewMarkVisible="gone"
+                    app:InputViewMaxLength="3"
+
+                    app:InputViewTitle="核载人数"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_y_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_y_10"
+                >
+
+                <!--<com.yzh.rfidbike_police.view.widgets.InputView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!---->
+                    <!--app:InputViewContent="系统管理员"-->
+                    <!--app:InputViewEditable="false"-->
+                    <!--app:InputViewMarkVisible="gone"-->
+                    <!--app:InputViewTitle="登记人"/>-->
+
+                <!--<com.yzh.rfidbike_police.view.widgets.InputView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!---->
+                    <!--app:InputViewContent="智慧城市物联网电动自行车监控平台"-->
+                    <!--app:InputViewEditable="false"-->
+                    <!--app:InputViewMarkVisible="gone"-->
+                    <!--app:InputViewTitle="登记机构"/>-->
+                <!--&lt;!&ndash;android:visibility="gone"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:visibility="gone"&ndash;&gt;-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mark"
+                        android:layout_width="@dimen/layout_x_100"
+                        android:layout_height="wrap_content"
+                        android:text="备  注"
+                        android:textColor="@color/textBlack"
+                        android:textSize="@dimen/font_size_small"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="备注"
+                        android:minHeight="@dimen/layout_x_100"
+                        android:textColor="@color/textDarkGray"
+                        android:textColorHint="@color/textGray"
+                        android:textSize="@dimen/font_size_small"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
